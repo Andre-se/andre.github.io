@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="odevler.css">
+    <script src="odevler.js"></script>
+    <title>Ödevler</title>
+</head>
+<body>
+    <h3 class="baslik">ÖDEVLER</h3>
+    <div class="container">
+        <div class="not_hesaplama">
+            <h3 style="text-align: center">Harf Notunu Gösterme</h3>
+        <br />
+        <form name="harf_notu" id="frm">
+          <div id="d2">
+            <input
+              type="number"
+              name="vize"
+              placeholder="Vize Notunu Giriniz" id="i1"/><br /><br />
+            <input
+              type="number"
+              name="final"
+              placeholder="Final Notunu Giriniz" id="i1"/>
+            <div>
+              <input
+                type="button"
+                value="HESAPLA"
+                id="hesap"
+                onClick="hesapla()" />
+            </div>
+          </div>
+        </form>
+          <div id="d3">
+            <label for="sonuc" id="sonuc"></label>
+          </div>
+        </div>
+        <!-- Kredi Risk Programi -->
+        <div class="kredi">
+          <div class="ic_satir3">
+         <h3 style="text-align: center">Kredi Risk Programi</h3>
+         <form name="kredi">
+           <div id="k1">
+             <input
+               type="text"
+               placeholder="Gelirinizi Giriniz"
+               name="gelir" id="i1"/><br /><br />
+             <input type="text" placeholder="Giderinizi Giriniz" name="gider" id="i1"/>
+             <div>
+               <input
+                 type="button"
+                 id="kredi"
+                 value="HESAPLA"
+                 onClick="krediHesap()" />
+             </div>
+           </div>
+           <div id="kSonuc">
+             <label for="krediSonuc" id="krediSonuc"></label>
+           </div>
+         </form>
+       </div>
+         </div>
+         <!-- Zam Hesaplama -->
+         <div class="zam">
+           <h3 style="text-align: center">Zam<br>Hesaplama</h3>
+         <form name="zam">
+           <div id="z1">
+             <input
+               type="text"
+               placeholder="Asgari Ucreti Giriniz"
+               name="asgari" id="i1"/><br /><br />
+             <input type="text" placeholder="Maasinizi Giriniz" name="maas" id="i1"/>
+             <div>
+               <input
+                 type="button"
+                 id="zam"
+                 value="HESAPLA"
+                 onClick="zamHesap()" />
+             </div>
+           </div>
+           <div id="zSonuc">
+             <label for="zamSonuc" id="zamSonuc"></label>
+           </div>
+         </form>
+         </div>
+        <!-------------- HESAP MAKINESI---------------->
+        <div class="calculator">
+          <div class="display">
+            <input id="result" readonly size="18"></input>
+          </div>
+          <div class="keypad">
+            <button type="button" id="clear" class="key" value="c" onclick='c("")'>AC</button>
+            <button type="button" class="key operator" value="±" onclick='v("±")'>±</button>
+            <button type="button" class="key operator" value="%" onclick='v("%")'>%</button>
+            <button type="button" class="key operator" value="/" onclick='v("/")'>÷</button>
+            <button type="button" class="key" value="7" onclick='v("7")'>7</button>
+            <button type="button" class="key" value="8"onclick='v("8")'>8</button>
+            <button type="button" class="key" value="9"onclick='v("9")'>9</button>
+            <button type="button" class="key operator" value="*" onclick='v("*")'>x</button>
+            <button type="button" class="key" value="4" onclick='v("4")'>4</button>
+            <button type="button" class="key" value="5" onclick='v("5")'>5</button>
+            <button type="button" class="key" value="6" onclick='v("6")'>6</button>
+            <button type="button" class="key operator" value="-" onclick='v("-")'>-</button>
+            <button type="button" class="key" value="1" onclick='v("1")'>1</button>
+            <button type="button" class="key" value="2" onclick='v("2")'>2</button>
+            <button type="button" class="key" value="3" onclick='v("3")'>3</button>
+            <button type="button" class="key operator" value="+" onclick='v("+")'>+</button>
+            <button type="button" class="key zero" value="0" onclick='v("0")'>0</button>
+            <button type="button" id="decimal" class="key" value="." onclick='v(".")'>.</button>
+            <button type="button" id="equals" class="key" value="=" onclick="e()">=</button>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
